@@ -11,14 +11,32 @@ import UIKit
 class ViewController: UIViewController {
     
     //1 - O, 2 - X
+    
+    var activePlayer = 1
+    var gameState = [0,0,0,0,0,0,0,0,0]
 
     @IBOutlet weak var button: UIButton!
     
-    @IBAction func buttonPressed(_ sender: Any) {
-        let image = UIImage(named: "cross.png")
+    @IBAction func buttonPressed(_ sender: AnyObject) {
         
-        (sender as AnyObject).setImage(image, for: .normal)
-        print((sender as AnyObject).tag)
+        if gameState[sender.tag] == 0{
+            var image = UIImage()
+            
+            gameState[sender.tag] = activePlayer
+            
+            if activePlayer == 1 {
+                image = UIImage(named: "circle.png")!
+                activePlayer = 2
+            } else {
+                image = UIImage(named: "cross.png")!
+                activePlayer = 1
+            }
+            
+            sender.setImage(image, for: .normal)
+            print(sender.tag)
+        }
+        
+       
     }
     
     override func viewDidLoad() {
