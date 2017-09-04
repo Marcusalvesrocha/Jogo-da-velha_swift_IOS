@@ -14,6 +14,9 @@
 		FABE98F61F58D979008FBDC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABE98F41F58D979008FBDC7 /* LaunchScreen.storyboard */; };
 		FABE99011F58D979008FBDC7 /* Jogo_da_velhaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABE99001F58D979008FBDC7 /* Jogo_da_velhaTests.swift */; };
 		FABE990C1F58D979008FBDC7 /* Jogo_da_velhaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABE990B1F58D979008FBDC7 /* Jogo_da_velhaUITests.swift */; };
+		FABE991C1F58DA8D008FBDC7 /* board.png in Resources */ = {isa = PBXBuildFile; fileRef = FABE99191F58DA8D008FBDC7 /* board.png */; };
+		FABE991D1F58DA8D008FBDC7 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = FABE991A1F58DA8D008FBDC7 /* circle.png */; };
+		FABE991E1F58DA8D008FBDC7 /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = FABE991B1F58DA8D008FBDC7 /* cross.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		FABE99071F58D979008FBDC7 /* Jogo da velhaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Jogo da velhaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABE990B1F58D979008FBDC7 /* Jogo_da_velhaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jogo_da_velhaUITests.swift; sourceTree = "<group>"; };
 		FABE990D1F58D979008FBDC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FABE99191F58DA8D008FBDC7 /* board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = board.png; sourceTree = "<group>"; };
+		FABE991A1F58DA8D008FBDC7 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
+		FABE991B1F58DA8D008FBDC7 /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,9 @@
 			isa = PBXGroup;
 			children = (
 				FABE98EB1F58D979008FBDC7 /* AppDelegate.swift */,
+				FABE99191F58DA8D008FBDC7 /* board.png */,
+				FABE991A1F58DA8D008FBDC7 /* circle.png */,
+				FABE991B1F58DA8D008FBDC7 /* cross.png */,
 				FABE98ED1F58D979008FBDC7 /* ViewController.swift */,
 				FABE98EF1F58D979008FBDC7 /* Main.storyboard */,
 				FABE98F21F58D979008FBDC7 /* Assets.xcassets */,
@@ -232,7 +241,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FABE991E1F58DA8D008FBDC7 /* cross.png in Resources */,
+				FABE991C1F58DA8D008FBDC7 /* board.png in Resources */,
 				FABE98F61F58D979008FBDC7 /* LaunchScreen.storyboard in Resources */,
+				FABE991D1F58DA8D008FBDC7 /* circle.png in Resources */,
 				FABE98F31F58D979008FBDC7 /* Assets.xcassets in Resources */,
 				FABE98F11F58D979008FBDC7 /* Main.storyboard in Resources */,
 			);
