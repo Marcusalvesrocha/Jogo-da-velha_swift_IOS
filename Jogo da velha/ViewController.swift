@@ -25,22 +25,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var gameOverLabel: UILabel!
     
     @IBAction func playAgainPressed(_ sender: AnyObject) {
-        activePlayer = 1
-        gameActive = true
-        gameState = [0,0,0,0,0,0,0,0,0]
         
-        gameOverLabel.isHidden = true
-        playAgainButton.isHidden = true
-        
-        var button: UIButton
-        
-        for i in 0 ..< 9 {
-            button = view.viewWithTag(i) as! UIButton
-            button.setImage(nil, for: .normal)
-        }
-        
-        gameOverLabel.center = CGPoint(x: gameOverLabel.center.x - 500, y :gameOverLabel.center.y)
-        playAgainButton.center = CGPoint(x: playAgainButton.center.x - 500, y :playAgainButton.center.y)
+        initialGame()
+        resetButtons()
     }
     
     @IBAction func buttonPressed(_ sender: AnyObject) {
@@ -80,7 +67,6 @@ class ViewController: UIViewController {
                         self.playAgainButton.center = CGPoint(x: self.playAgainButton.center.x - 500, y: self.playAgainButton.center.y)
                     })
                     
-                    print(winner)
                     gameActive = false
                 }
             }
@@ -92,13 +78,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        gameOverLabel.isHidden = true
-        playAgainButton.isHidden = true
-        
-        //gameOverLabel.center = CGPoint(x: gameOverLabel.center - 500, gameOverLabel.center.y)
-        
-        gameOverLabel.center = CGPoint(x: gameOverLabel.center.x - 500, y :gameOverLabel.center.y)
-        playAgainButton.center = CGPoint(x: playAgainButton.center.x - 500, y :playAgainButton.center.y)
+        resetButtons()
         
     }
 
@@ -106,7 +86,29 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    func resetButtons() {
+        gameOverLabel.isHidden = true
+        playAgainButton.isHidden = true
+        
+        //gameOverLabel.center = CGPoint(x: gameOverLabel.center - 500, gameOverLabel.center.y)
+        
+        gameOverLabel.center = CGPoint(x: gameOverLabel.center.x - 500, y :gameOverLabel.center.y)
+        playAgainButton.center = CGPoint(x: playAgainButton.center.x - 500, y :playAgainButton.center.y)
+    }
+    
+    func initialGame() {
+        activePlayer = 1
+        gameActive = true
+        gameState = [0,0,0,0,0,0,0,0,0]
+        
+        var button: UIButton
+        
+        for i in 0 ..< 9 {
+            button = view.viewWithTag(i) as! UIButton
+            button.setImage(nil, for: .normal)
+        }
+    }
 
 }
 
